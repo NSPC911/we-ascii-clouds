@@ -1,0 +1,210 @@
+{
+  "description": "Animated ASCII cloud scene rendered with WebGL simplex noise and SDF glyphs",
+  "file": "src/index.html",
+  "general": {
+    "properties": {
+      "preset": {
+        "order": 0,
+        "text": "Preset",
+        "type": "combo",
+        "value": 0,
+        "options": [
+          { "label": "Default", "value": 0 },
+          { "label": "Terminal", "value": 1 },
+          { "label": "Retro CRT", "value": 2 },
+          { "label": "Cosmic", "value": 3 },
+          { "label": "Fog", "value": 4 }
+        ]
+      },
+
+      "headernoise": {
+        "order": 1,
+        "text": "<h3>Noise & Motion</h3>",
+        "type": "text"
+      },
+      "cellsize": {
+        "order": 2,
+        "text": "Cell Size",
+        "type": "slider",
+        "value": 10,
+        "min": 4,
+        "max": 32
+      },
+      "waveamplitude": {
+        "order": 3,
+        "text": "Wave Amplitude",
+        "type": "slider",
+        "value": 15,
+        "min": 0,
+        "max": 100,
+        "fraction": true,
+        "precision": 2
+      },
+      "wavespeed": {
+        "order": 4,
+        "text": "Wave Speed",
+        "type": "slider",
+        "value": 50,
+        "min": 0,
+        "max": 200,
+        "fraction": true,
+        "precision": 2
+      },
+      "noiseintensity": {
+        "order": 5,
+        "text": "Noise Intensity",
+        "type": "slider",
+        "value": 0,
+        "min": 0,
+        "max": 250,
+        "fraction": true,
+        "precision": 3
+      },
+      "timespeed": {
+        "order": 6,
+        "text": "Time Speed",
+        "type": "slider",
+        "value": 10,
+        "min": 0,
+        "max": 30,
+        "fraction": true,
+        "precision": 1
+      },
+      "noiseseed": {
+        "order": 7,
+        "text": "Noise Seed",
+        "type": "textinput",
+        "value": ""
+      },
+
+      "headervignette": {
+        "order": 10,
+        "text": "<h3>Vignette</h3>",
+        "type": "text"
+      },
+      "vignetteintensity": {
+        "order": 11,
+        "text": "Vignette Intensity",
+        "type": "slider",
+        "value": 50,
+        "min": 0,
+        "max": 100,
+        "fraction": true,
+        "precision": 2
+      },
+      "vignetteradius": {
+        "order": 12,
+        "text": "Vignette Radius",
+        "type": "slider",
+        "value": 50,
+        "min": 0,
+        "max": 100,
+        "fraction": true,
+        "precision": 2
+      },
+
+      "headercolor": {
+        "order": 20,
+        "text": "<h3>Color</h3>",
+        "type": "text"
+      },
+      "glyphcolor": {
+        "order": 21,
+        "text": "Glyph Color",
+        "type": "color",
+        "value": "0.25 0.75 0.75"
+      },
+      "brightnessadjust": {
+        "order": 22,
+        "text": "Brightness",
+        "type": "slider",
+        "value": 0,
+        "min": -50,
+        "max": 50,
+        "fraction": true,
+        "precision": 2
+      },
+      "contrastadjust": {
+        "order": 23,
+        "text": "Contrast",
+        "type": "slider",
+        "value": 100,
+        "min": 50,
+        "max": 200,
+        "fraction": true,
+        "precision": 2
+      },
+
+      "showadvanced": {
+        "order": 28,
+        "text": "Show Advanced",
+        "type": "bool",
+        "value": false
+      },
+      "headerthresholds": {
+        "order": 29,
+        "text": "<h3>Glyph Thresholds</h3>",
+        "type": "text",
+        "condition": "showadvanced.value == true"
+      },
+      "threshold1": {
+        "order": 30,
+        "text": "Threshold: . (dot)",
+        "type": "slider",
+        "value": 25,
+        "min": 0,
+        "max": 50,
+        "fraction": true,
+        "precision": 2,
+        "condition": "showadvanced.value == true"
+      },
+      "threshold2": {
+        "order": 31,
+        "text": "Threshold: - (dash)",
+        "type": "slider",
+        "value": 30,
+        "min": 0,
+        "max": 60,
+        "fraction": true,
+        "precision": 2,
+        "condition": "showadvanced.value == true"
+      },
+      "threshold3": {
+        "order": 32,
+        "text": "Threshold: + (plus)",
+        "type": "slider",
+        "value": 40,
+        "min": 10,
+        "max": 70,
+        "fraction": true,
+        "precision": 2,
+        "condition": "showadvanced.value == true"
+      },
+      "threshold4": {
+        "order": 33,
+        "text": "Threshold: O (ring)",
+        "type": "slider",
+        "value": 50,
+        "min": 20,
+        "max": 80,
+        "fraction": true,
+        "precision": 2,
+        "condition": "showadvanced.value == true"
+      },
+      "threshold5": {
+        "order": 34,
+        "text": "Threshold: X (cross)",
+        "type": "slider",
+        "value": 65,
+        "min": 30,
+        "max": 100,
+        "fraction": true,
+        "precision": 2,
+        "condition": "showadvanced.value == true"
+      }
+    }
+  },
+  "title": "ASCII Clouds",
+  "type": "web",
+  "version": 1
+}
